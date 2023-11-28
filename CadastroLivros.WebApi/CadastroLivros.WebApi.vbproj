@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace></RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CadastroLivros.Domain\CadastroLivros.Domain.vbproj" />
+    <ProjectReference Include="..\CadastroLivros.IoC\CadastroLivros.IoC.vbproj" />
+    <ProjectReference Include="..\CadastroLivros.Service\CadastroLivros.Service.vbproj" />
+  </ItemGroup>
+</Project>

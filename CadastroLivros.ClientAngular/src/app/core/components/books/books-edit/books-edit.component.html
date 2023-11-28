@@ -1,0 +1,69 @@
+<div class="container">
+
+    <h1 class="mt-3">Editar Livro</h1>
+
+    <form #form="ngForm" (ngSubmit)="onFormSubmit()">
+
+        <div class="mt-2">
+
+            <div class="input-group mt-3">
+                <span class="input-group-text w-25 p-3">Título</span>
+                <input type="text" id="titulo" class="form-control" maxlength="40" name="titulo" [(ngModel)]="model.Titulo" />
+            </div>
+
+            <div class="input-group mt-3">
+                <span class="input-group-text w-25 p-3">Editora</span>
+                <input type="text" id="editora" class="form-control" maxlength="40" name="editora" [(ngModel)]="model.Editora" />
+            </div>
+
+            <div class="input-group mt-3">
+                <span class="input-group-text w-25 p-3">Edição</span>
+                <input type="text" id="edicao" class="form-control" maxlength="10" name="edicao" [(ngModel)]="model.Edicao" />
+            </div>
+
+            <div class="input-group mt-3">
+                <span class="input-group-text w-25 p-3">Ano de publicação</span>
+                <input type="text" id="anoPublicacao" class="form-control" maxlength="4" name="anoPublicacao" [(ngModel)]="model.AnoPublicacao" />
+            </div>
+
+            <div class="input-group mt-3">
+                <span class="input-group-text w-25 p-3">Preço (R$)</span>
+                <input type="text" id="preco" class="form-control" name="preco" maxlength="10" [(ngModel)]="model.Preco">
+            </div>
+
+            <div class="input-group mt-3">
+                <span class="input-group-text w-25 p-3">Autores</span>
+                <input type="text" class="form-control" maxlength="40" name="Autores" [(ngModel)]="autor" />
+                <span class="btn btn-primary w-20 p-3" (click)="addAutores()" onclick="addAutores()">+</span>
+            </div>
+
+            <div class="input-group mt-3">
+                <span class="input-group-text w-25 p-3">Assuntos</span>
+                <input type="text" id="assuntos" maxlength="20" class="form-control" name="Assuntos" [(ngModel)]="assunto" />
+                <span class="btn btn-primary w-20 p-3" (click)="addAssuntos()">+</span>
+            </div>
+
+            <div class="mt-3">
+                <button type="submit" class="btn btn-primary w-25 p-3"><h2>Gravar</h2></button>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col">
+                    <h5>Autores</h5>
+                    <ul>
+                        <li *ngFor="let item of model.Autores">{{ item }}</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h5>Assuntos</h5>
+                    <ul>
+                        <li *ngFor="let item of model.Assuntos">{{ item }}</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </form>
+
+</div>
